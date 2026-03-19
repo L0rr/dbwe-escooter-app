@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+    <h2>Registrierung</h2>
+    <form method="post">
+        <label>Vollständiger Name</label>
+        <input type="text" name="full_name" required>
+        <label>Benutzername</label>
+        <input type="text" name="username" required>
+        <label>E-Mail</label>
+        <input type="email" name="email" required>
+        <label>Passwort</label>
+        <input type="password" name="password" required>
+        <label>Rolle</label>
+        <select name="role" required>
+            <option value="driver">Fahrer</option>
+            <option value="provider">Anbieter</option>
+        </select>
+        <p><button class="btn" type="submit">Benutzer erstellen</button></p>
+    </form>
+</div>
+{% endblock %}

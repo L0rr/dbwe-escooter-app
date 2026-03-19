@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+    <h2>QR-Code scannen</h2>
+    <p class="small">Für die Demo reicht das QR-Code Feld, z.B. QR-SC-1002.</p>
+    <form method="post">
+        <label>QR-Code</label>
+        <input type="text" name="qr_code" required>
+        <p><button class="btn" type="submit">Fahrzeug suchen</button></p>
+    </form>
+</div>
+{% endblock %}

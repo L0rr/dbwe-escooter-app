@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+    <h2>Zahlungsmittel erfassen</h2>
+    <form method="post">
+        <label>Typ</label>
+        <select name="method_type" required>
+            <option value="card">Kreditkarte</option>
+            <option value="twint">TWINT</option>
+        </select>
+        <label>Anbieter</label>
+        <input type="text" name="provider_name" required>
+        <label>Maskierte Details</label>
+        <input type="text" name="masked_details" placeholder="z.B. **** 1111" required>
+        <label><input type="checkbox" name="is_default"> Als Standard setzen</label>
+        <p><button class="btn" type="submit">Speichern</button></p>
+    </form>
+</div>
+{% endblock %}
